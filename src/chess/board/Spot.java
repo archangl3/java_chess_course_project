@@ -1,6 +1,6 @@
 package chess.board;
 
-import chess.pieces.Piece;
+import chess.piece.Piece;
 
 public class Spot {
 	private Piece piece; 

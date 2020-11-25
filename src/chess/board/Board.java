@@ -1,8 +1,8 @@
 package chess.board;
 
-import chess.pieces.Piece;
-import chess.pieces.PiecesFactory;
-import chess.pieces.Side;
+import chess.piece.Piece;
+import chess.piece.PiecesFactory;
+import chess.piece.Side;
 
 public class Board {
 	final static int COL_NUM = 8;

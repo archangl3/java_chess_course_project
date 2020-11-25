@@ -1,4 +1,4 @@
-package chess.pieces;
+package chess.piece;
 
 public class Pawn extends Piece {
 	

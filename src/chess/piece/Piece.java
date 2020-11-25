@@ -1,4 +1,4 @@
-package chess.pieces;
+package chess.piece;
 
 public abstract class Piece {
 	private final String NAME;
