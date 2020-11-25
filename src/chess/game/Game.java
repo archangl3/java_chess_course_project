@@ -1,5 +1,7 @@
 package chess.game;
 
+import java.util.Scanner;
+
 import chess.board.Board;
 import chess.piece.Side;
 
@@ -24,7 +26,23 @@ public class Game {
 		
 		while (status == GameStatus.ACTIVE) {
 			// input command
+			Scanner sc = new Scanner(System.in);
+			String commandStr = sc.next();
+			
 			// execute command
+			switch (commandStr) {
+				case "exit" :
+					System.out.println("Exit...");
+					System.exit(0);
+					break;
+				case "undo":
+					System.out.println("Undo.");
+					break;
+				case "move":
+					break;
+				default :
+					System.out.println("Command not found");
+			}
 		}
 	}
 }
