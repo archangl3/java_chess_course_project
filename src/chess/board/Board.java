@@ -7,22 +7,22 @@ import chess.piece.Side;
 public class Board {
 	final static int COL_NUM = 8;
 	final static int ROW_NUM = 8;
-	private final static String INDEXES = "abcdefgh";
+	public final static String INDEXES = "abcdefgh";
 	private final static String[] STD_POSITIONS = {
 			"ROCK", "KNIGHT", "BISHOP", "QUEEN", "KING", "BISHOP", "KNIGHT", "ROCK" 
 	};
 	
-	private Spot[][] cells;
+	private Cell[][] cells;
 
 	public Board() {
-		cells = new Spot[COL_NUM][ROW_NUM];
+		cells = new Cell[COL_NUM][ROW_NUM];
 		reset();
 	}
 	
 	public void reset() {
 		for (int i = 0; i < ROW_NUM; i++) {
 			for (int j = 0; j < COL_NUM; j++) {
-				cells[i][j] = new Spot(i, j, null);
+				cells[i][j] = new Cell(i, j, null);
 			}
 		}
 		
@@ -35,16 +35,20 @@ public class Board {
 
 	}
 	
+	public Cell getCell(int i, int j) {
+		return cells[i][j];
+	}
+	
 	public void print() {
 		printIndexes();
 		printSep();
 		for (int i = 0; i < ROW_NUM; i++) {
-			System.out.printf(" %d |",i+1);
+			System.out.printf(" %d |", 8 - i);
 			for (int j = 0; j < COL_NUM; j++) {
 				Piece piece = cells[i][j].getPiece();
 				System.out.printf(" %s |", piece == null ? "  " : piece);
 			}
-			System.out.printf(" %d\n",i+1);
+			System.out.printf(" %d\n", 8 - i);
 			printSep();
 		}
 		printIndexes();

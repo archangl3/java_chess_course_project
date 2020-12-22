@@ -23,7 +23,13 @@ public class Player {
 	public String toString() {
 		return String.format("%s (%s side)", name, side);
 	}
-	
-	
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setSide(Side side) {
+		this.side = side;
+	}
 	
 }

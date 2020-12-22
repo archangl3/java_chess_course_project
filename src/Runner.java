@@ -6,7 +6,6 @@ public class Runner {
 
 	public static void main(String[] args) {
 		
-		
 		Player[] players = {
 				new Player("Player 1", Side.WHITE),
 				new Player("Player 2", Side.BLACK)
